@@ -1,5 +1,5 @@
 {
-	"name": "quilhasoft/opencnabphpBank",
+	"name": "quilhasoft/opencnabphpbank",
 	"type": "library",
 	"description": "Está biblioteca faz a leitura de arquivos remessa e auxilia na geração de arquivos de retorno, voltado para fintechs desejam recepcionar arquivo de remessa enviados pelos cliente e gerar arquivo de retorno",
 	"keywords": ["boleto", "remessa", "retorno", "cnabphp", "cnab240", "cnab400","itau","bradesco","caixa","santander","sicoob","uniprime"],
