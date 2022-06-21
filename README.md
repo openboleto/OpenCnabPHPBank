@@ -1,7 +1,7 @@
 ﻿# OpenCnabPHPBank
 [![Build Status](https://travis-ci.org/QuilhaSoft/OpenCnabPHP.svg?branch=master)](https://travis-ci.org/QuilhaSoft/OpenCnabPHP)
 
-Está classe faz a leitura de arquivos remessa e auxilia na geração de arquivos de retorno, voltado para fintechs desejam recepcionar arquivo de remessa enviados pelos cliente e gerar arquivo de retorno
+Está biblioteca faz a leitura de arquivos remessa e auxilia na geração de arquivos de retorno, voltado para fintechs desejam recepcionar arquivo de remessa enviados pelos cliente e gerar arquivo de retorno
 
 Considere doar fundos para nos apoiar
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EE7CD4UZEL3A4&source=url)

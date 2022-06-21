@@ -1,13 +1,13 @@
 {
-	"name": "quilhasoft/opencnabphp",
+	"name": "quilhasoft/opencnabphpBank",
 	"type": "library",
-	"description": "Biblioteca multibanco para geração e leitura de arquivos Cnab de remessa e retorno",
+	"description": "Está biblioteca faz a leitura de arquivos remessa e auxilia na geração de arquivos de retorno, voltado para fintechs desejam recepcionar arquivo de remessa enviados pelos cliente e gerar arquivo de retorno",
 	"keywords": ["boleto", "remessa", "retorno", "cnabphp", "cnab240", "cnab400","itau","bradesco","caixa","santander","sicoob","uniprime"],
 	"license": "MIT",
 	"authors": [
 		{
 			"name": "Rogerio Muniz de Castro",
-			"email": "rogerio@quilhasoft.com.br"
+			"email": "rogeriomunizcastro@gmail.com"
 		}
 	],
 	"autoload": {
