@@ -88,9 +88,9 @@ https://github.com/QuilhaSoft/OpenCnabPHP/issues/184
 ```php
 
 <?php
-use \CnabPHP\Remessa;
+use \CnabPHP\Retorno;
 
-$arquivo = new Remessa(104,'cnab240_SIGCB',array(
+$arquivo = new Retorno(246,'cnab240',array(
     'nome_empresa' =>"Empresa ABC", // seu nome de empresa
     'tipo_inscricao'  => 2, // 1 para cpf, 2 cnpj 
     'numero_inscricao' => $empresa->empresas_cnpjcpf, // seu cpf ou cnpj completo
@@ -147,13 +147,13 @@ echo $arquivo->getText();
 ```
 
 <line>
-<h3>Lendo retorno</h3>
+<h3>Lendo remessa</h3>
 
 ```php
 <?php
 $fileContent = file_get_contents("retorno_cnab240_caixa.ret");
 
-$arquivo = new Retorno($fileContent);
+$arquivo = new Remessa($fileContent);
 
 $registros = $arquivo->getRegistros();
 foreach($registros as $registro)
