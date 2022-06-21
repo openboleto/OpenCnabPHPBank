@@ -1,5 +1,7 @@
-﻿# OpenCnabPHP 
+﻿# OpenCnabPHPBank
 [![Build Status](https://travis-ci.org/QuilhaSoft/OpenCnabPHP.svg?branch=master)](https://travis-ci.org/QuilhaSoft/OpenCnabPHP)
+
+Está classe faz a leitura de arquivos remessa e auxilia na geração de arquivos de retorno, voltado para fintechs desejam recepcionar arquivo de remessa enviados pelos cliente e gerar arquivo de retorno
 
 Considere doar fundos para nos apoiar
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EE7CD4UZEL3A4&source=url)
@@ -28,7 +30,7 @@ docker-compose up -d
 ## Instalando via composer:
 
 
-Adicione "quilhasoft/opencnabphp": "dev-master" ao seu composer.json e rode update ou install
+Adicione "quilhasoft/opencnabphpbank": "dev-master" ao seu composer.json e rode update ou install
 
 Acesse a url de exemplo: 
 `http://localhost:8080/samples/ExemploRemessa.php`
@@ -62,240 +64,19 @@ Acesse a url de exemplo:
     </tr>
     <tr>
         <td>
-            Banco do Brasil
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Beta
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Bradesco
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Beta
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Caixa
-        </td>
-        <td>
-            Cnab240_SIGCB
-        </td>
-        <td>
-            DESATIVADO**
-        </td>
-        <td>
-            Cnab240_SIGCB
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Caixa
-        </td>
-        <td>
-            Cnab240_Transf
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab240_Transf
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Itau
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Beta
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Beta
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Itau
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Santander
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-           Cnab240 
-        </td>
-        <td>
-            Beta
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SICOOB
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SICOOB
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab240
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SICREDI
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Beta
-        </td>
-    </tr>
-    <tr>
-        <td>
-            UniPrime
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Beta
-        </td>
-    </tr>
-    <tr>
-        <td>
-            UniCred
-        </td>
-        <td>
-            -
-        </td>
-        <td>
-            -
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>
-    <tr>
-        <td>
-            C6 Bank
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-        <td>
-            Cnab400
-        </td>
-        <td>
-            Homologado
-        </td>
-    </tr>    
-    <tr>
-        <td>
             Banco ABC
         </td>
         <td>
             Cnab240
         </td>
         <td>
-            Beta
+            Homologado
         </td>
         <td>
             Cnab240
         </td>
         <td>
-            Beta
+            Homologado
         </td>
     </tr>  
 </table>
