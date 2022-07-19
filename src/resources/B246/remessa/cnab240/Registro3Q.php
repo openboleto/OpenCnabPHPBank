@@ -96,12 +96,12 @@ class Registro3Q extends Generico3
 		'cep_pagador'=>array(      //13.3Q   
 			'tamanho'=>5,
 			'default'=>'',
-			'tipo'=>'int',
+			'tipo'=>'alfa',
 			'required'=>true),
 		'cep_sufixo'=>array(  //14.3Q
 			'tamanho'=>3,
-			'default'=>' ',
-			'tipo'=>'int',
+			'default'=>'',
+			'tipo'=>'alfa',
 			'required'=>true),
 		'cidade_pagador'=>array(   //15.3Q
 			'tamanho'=>15,
