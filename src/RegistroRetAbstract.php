@@ -32,6 +32,7 @@ use Exception;
 abstract class RegistroRetAbstract extends RegistroAbstract
 {
     protected $entryData;
+    
     protected $counter;
     /**
      * Método __construct()
