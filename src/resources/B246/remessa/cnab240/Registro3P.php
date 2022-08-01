@@ -278,30 +278,20 @@ class Registro3P extends Generico3 {
         RemessaAbstract::$linesCounter++;
         $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3Q';
         self::addChild(new $class(RemessaAbstract::$lines[RemessaAbstract::$linesCounter]));
-		RemessaAbstract::$linesCounter++;
-        $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3R';
-        self::addChild(new $class(RemessaAbstract::$lines[RemessaAbstract::$linesCounter]));
-		
-        // if ($data['emissao_boleto'] == 1) {
-        //     if (isset($data['mensagem_frente'])) {
-        //         $data['mensagem_140'] = $data['mensagem_frente'];
-        //         $data['tipo_impressao'] = 1;
-        //         $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3S1e2';
-        //         $this->children[] = new $class($data);
-        //     }
-        //     if (isset($data['mensagem_verso'])) {
-        //         $data['mensagem_140'] = $data['mensagem_verso'];
-        //         $data['tipo_impressao'] = 2;
-        //         $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3S1e2';
-        //         $this->children[] = new $class($data);
-        //     }
-        //     if (isset($data['mensagem'])) {
-        //         if (count(explode(PHP_EOL, $data['mensagem'])) > 4) {
-        //             $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3S3';
-        //             $this->children[] = new $class($data);
-        //         }
-        //     }
-        //}
+        $tipoSeguimentoNextLine = $this->getSeguimentoFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
+        $tipoRegistroOpcionalNextLine = $this->getTipoOpcionalFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
+        while ($this->ehRegistroOpcional( $tipoSeguimentoNextLine.$tipoRegistroOpcionalNextLine)) {
+            
+            $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3' .$tipoSeguimentoNextLine. $tipoRegistroOpcionalNextLine ;
+            RemessaAbstract::$linesCounter++;
+            if (class_exists($class)) {
+                self::addChild(new $class(RemessaAbstract::$lines[RemessaAbstract::$linesCounter]));
+            }
+            $tipoSeguimentoNextLine = $this->getSeguimentoFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
+            $tipoRegistroOpcionalNextLine = $this->getTipoOpcionalFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
+            
+        }    
+
     }
 
 }
