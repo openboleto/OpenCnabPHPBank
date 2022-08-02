@@ -37,18 +37,10 @@ class Generico3 extends RegistroRemAbstract
 	{
 		return $this->children[0];
 	}
-    public function get_R3R()
-	{
-		return $this->children[1];
-	}
     public function get_R3Y3(){
-        return $this->children[2]; 
+        return isset($this->children[2])?$this->children[2]:null; 
     }
 
-    public function getTipoOpcionalFilho($linha){
-       
-        return (int)substr($linha,18,2)>0?(int)substr($linha,18,2):null;
-    }
     public function getSeguimentoFilho($linha){
         return substr($linha,13,1);
     }
