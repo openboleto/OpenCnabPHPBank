@@ -137,6 +137,6 @@ abstract class RegistroRetAbstract extends RegistroAbstract
 
     public function getFileName()
     {
-        return 'R' . RemessaAbstract::$banco . str_pad('U'.$idUsuario , 6, '0', STR_PAD_LEFT) . '.ret';
+        return 'R' . RemessaAbstract::$banco . str_pad('U123456' , 6, '0', STR_PAD_LEFT) . '.ret';
     }
 }
