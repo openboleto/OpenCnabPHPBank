@@ -74,7 +74,7 @@ class Registro3Y3 extends Generico3
 			// - ------------------ até aqui é igual para todo registro tipo 3
 			
 		'email'=>array(               // 8.3S
-			'tamanho'=>50,
+			'tamanho'=>210,
 			'default'=>'3',
 			'tipo'=>'alfa',
 			'required'=>true),
@@ -87,12 +87,7 @@ class Registro3Y3 extends Generico3
 			'tamanho'=>9,
 			'default'=>' ',
 			'tipo'=>'alfa',
-			'required'=>true),
-		'filler3'=>array(               //14.3S
-			'tamanho'=>160,
-			'default'=>' ',
-			'tipo'=>'alfa',
-			'required'=>true),
+			'required'=>true)
 	);
 }
 
