@@ -282,14 +282,15 @@ class Registro3P extends Generico3 {
         $tipoRegistroOpcionalNextLine = $this->getTipoOpcionalFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
         while ($this->ehRegistroOpcional( $tipoSeguimentoNextLine.$tipoRegistroOpcionalNextLine)) {
             
-            $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3' .$tipoSeguimentoNextLine. $tipoRegistroOpcionalNextLine ;
             RemessaAbstract::$linesCounter++;
+            $class = 'CnabPHPBank\resources\\B' . RemessaAbstract::$banco . '\remessa\\' . RemessaAbstract::$layout . '\Registro3' .$tipoSeguimentoNextLine. $tipoRegistroOpcionalNextLine ;
+            
             if (class_exists($class)) {
                 self::addChild(new $class(RemessaAbstract::$lines[RemessaAbstract::$linesCounter]));
+                
             }
-            $tipoSeguimentoNextLine = $this->getSeguimentoFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
+            $tipoSeguimentoNextLine = $this->getSeguimentoFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1 ]);
             $tipoRegistroOpcionalNextLine = $this->getTipoOpcionalFilho(RemessaAbstract::$lines[RemessaAbstract::$linesCounter + 1]);
-            
         }    
     }
 
