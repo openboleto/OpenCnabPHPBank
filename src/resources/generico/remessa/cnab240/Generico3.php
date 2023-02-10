@@ -32,7 +32,7 @@ use Exception;
 
 class Generico3 extends RegistroRemAbstract
 {
-    private  $registrosOpcionais = ['R'=>true,'Y3'=>true];
+    private  $registrosOpcionais = ['R'=>true,'Y3'=>true,'Y52'=>true];
     public function get_R3Q()
 	{
 		return $this->children[0];
@@ -47,7 +47,7 @@ class Generico3 extends RegistroRemAbstract
 
     public function getTipoOpcionalFilho($linha){
        
-        return (int)substr($linha,18,2)>0?(int)substr($linha,18,2):null;
+        return (int)substr($linha,17,2)>0?(int)substr($linha,17,2):null;
     }
     public function getSeguimentoFilho($linha){
         return substr($linha,13,1);
